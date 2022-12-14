@@ -1,4 +1,4 @@
-## Setup Hashicorp Vault Server With Consul As Backend Storsge on Docker 
+## Setup Hashicorp Vault Server With Consul As Backend Storage on Docker 
 
 <p align="center">
 <img alt="Vault-Consule Logo" src="vault-consul-logo/vault-consul-logo.jpg" width="800">
