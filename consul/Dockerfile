@@ -14,7 +14,8 @@ RUN mkdir -p /etc/consul.d && \
     chown -R consul:consul /etc/consul.d && \
     chown -R consul:consul /opt/consul
 
-COPY consul /bin
-RUN consul version
+RUN wget ${HASHICORP_RELEASES}/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_linux_${consulArch}.zip && \
+    unzip -d /bin consul_${CONSUL_VERSION}_linux_${consulArch}.zip && \
+    consul version
 
 EXPOSE 8300 8301 8301/udp 8302 8302/udp 8500 8600 8600/udp
